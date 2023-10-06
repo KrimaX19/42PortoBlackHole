@@ -21,27 +21,46 @@ Se "n = 0", retorna "0"
 #include <string.h>
 #include <stdio.h>
 
-int memcmp(const void *s1, const void *s2, size_t n)
+int ft_memcmp(const void *s1, const void *s2, size_t n)
 {
+    int i = 0;
 
+    while(n > 0)
+    {
+        if(&s1[i] == &s2[i])
+        {
+            i++;
+            --n;
+        }
+        else
+        {
+            return(&s2[i] - &s1[i]);
+        }
+    }
+    return(&s2[i] - &s1[i]);
 }
 
 int main () {
    char str1[15];
    char str2[15];
    int ret;
+   int ter;
 
-   memcpy(str1, "abcdef", 6);
+   memcpy(str1, "ABCDEF", 6);
    memcpy(str2, "ABCDEF", 6);
 
-   ret = memcmp(str1, str2, 5);
+   ret = ft_memcmp(str1, str2, 5);
+   ter = memcmp(str1, str2, 5);
 
    if(ret > 0) {
-      printf("str2 is less than str1");
+      printf("str2 is less than str1, %d\n", ret);
+      printf("str2 is less than str1, %d\n", ter);
    } else if(ret < 0) {
-      printf("str1 is less than str2");
+      printf("str1 is less than str2, %d\n", ret);
+       printf("str1 is less than str2, %d\n", ter);
    } else {
-      printf("str1 is equal to str2");
+      printf("str1 is equal to str2, %d\n", ret);
+      printf("str1 is equal to str2, %d\n", ter);
    }
    
    return(0);
