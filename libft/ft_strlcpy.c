@@ -3,35 +3,42 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rusoares <rusoares@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/02 14:27:02 by rusoares          #+#    #+#             */
-/*   Updated: 2023/10/06 11:30:05 by rusoares         ###   ########.fr       */
+/*   Updated: 2023/10/21 17:40:22 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
 #include <unistd.h>
 #include <stdio.h>
+*/
+#include <unistd.h>
 
-size_t  ft_strlcpy(char *dst, char *src, size_t size)
+size_t	ft_strlcpy(char *dst, char *src, size_t size)
 {
-    unsigned int i = 0;
+	size_t	i;
+	size_t	c;
 
-    while(src[i] != '\0' && i < --size)
-    {
-        dst[i] = src[i];
-        i++;
-    }
-    dst[i] = '\0';
-    i = 0;
-    while (src[i] != '\0')
-    {
-        i++;
-    }
-    return(i);   
-
+	i = 0;
+	c = 0;
+	if (size > 0)
+	{
+		while (src[i] != '\0' && i < (size - 1))
+		{
+			dst[i] = src[i];
+			i++;
+		}
+		dst[i] = '\0';
+	}
+	while (src[c] != '\0')
+	{
+		c++;
+	}
+	return (c);
 }
-
+/*
 int main(void)
 {
     char dst1 [] = "0000";
@@ -82,15 +89,14 @@ int main(void)
     printf("Resultado: %ld\n", ft_strlcpy(dst3, src3, 5));
     printf("SRC:%s\n", src3);
     printf("DST:%s\n", dst3);
-/*
     printf("Resultado SRC > DST: %ld\n", ft_strlcpy(dst2, src2, size2));
     printf("SRC:%s\n", src);
     printf("DST:%s\n", dst);
     printf("Resultado SRC < DST: %ld\n", ft_strlcpy(dst3, src3, size3));
     printf("SRC:%s\n", src);
-    printf("DST:%s\n", dst);*/
+    printf("DST:%s\n", dst);
     return(0);
-}
+}*/
 
 /*
 srtlcpy

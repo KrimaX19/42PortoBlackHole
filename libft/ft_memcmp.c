@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rusoares <rusoares@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/06 16:22:51 by rusoares          #+#    #+#             */
-/*   Updated: 2023/10/06 16:38:25 by rusoares         ###   ########.fr       */
+/*   Updated: 2023/10/21 17:40:09 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,29 +17,32 @@ para um retorno sem ser "0" o sinal e determinado pela diferenca do primeiro
 par de bytes de "s1" "s2".
 Se "n = 0", retorna "0"
 */
-
+/*
 #include <string.h>
 #include <stdio.h>
+*/
+#include <unistd.h>
 
-int ft_memcmp(const void *s1, const void *s2, size_t n)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-    int i = 0;
+	const unsigned char	*p1;
+	const unsigned char	*p2;
 
-    while(n > 0)
-    {
-        if(&s1[i] == &s2[i])
-        {
-            i++;
-            --n;
-        }
-        else
-        {
-            return(&s2[i] - &s1[i]);
-        }
-    }
-    return(&s2[i] - &s1[i]);
+	p1 = s1;
+	p2 = s2;
+	while (n > 0)
+	{
+		if (*p1 != *p2)
+		{
+			return (*p2 - *p2);
+		}
+		p1++;
+		p2++;
+		n--;
+	}
+	return (0);
 }
-
+/*
 int main () {
    char str1[15];
    char str2[15];
@@ -64,4 +67,4 @@ int main () {
    }
    
    return(0);
-}
+}*/
