@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: rusoares <rusoares@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/02 13:42:13 by rusoares          #+#    #+#             */
-/*   Updated: 2023/10/21 17:40:36 by marvin           ###   ########.fr       */
+/*   Updated: 2023/10/30 19:24:38 by rusoares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ int main(void)
 {
     int a = 10;
     int b = 800;
-    int c = 33;
+    int c = 27;
     int d = 155;
 
     printf("Isprint: %d\n", isprint(a));

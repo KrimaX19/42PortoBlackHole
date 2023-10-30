@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: rusoares <rusoares@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/06 16:22:51 by rusoares          #+#    #+#             */
-/*   Updated: 2023/10/21 17:40:09 by marvin           ###   ########.fr       */
+/*   Updated: 2023/10/30 20:43:46 by rusoares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,16 +25,16 @@ Se "n = 0", retorna "0"
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	const unsigned char	*p1;
-	const unsigned char	*p2;
+	unsigned char	*p1;
+	unsigned char	*p2;
 
-	p1 = s1;
-	p2 = s2;
+	p1 = (unsigned char *)s1;
+	p2 = (unsigned char *)s2;
 	while (n > 0)
 	{
 		if (*p1 != *p2)
 		{
-			return (*p2 - *p2);
+			return (*p1 - *p2);
 		}
 		p1++;
 		p2++;

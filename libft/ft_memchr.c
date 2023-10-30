@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: rusoares <rusoares@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/06 15:38:15 by rusoares          #+#    #+#             */
-/*   Updated: 2023/10/21 17:40:35 by marvin           ###   ########.fr       */
+/*   Updated: 2023/10/30 20:23:11 by rusoares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,13 +22,13 @@ caracter descrito em "c".
 void	*ft_memchr(const void *s, int c, size_t n)
 {
 	int		i;
-	char	*t;
+	unsigned char	*t;
 
 	i = 0;
-	t = (char *)s;
+	t = (unsigned char *)s;
 	while (n > 0)
 	{
-		if (t[i] == c)
+		if (t[i] == (unsigned char)c)
 		{
 			return (&t[i]);
 		}
