@@ -21,8 +21,8 @@ caracter descrito em "c".
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
-	int		i;
 	unsigned char	*t;
+	int				i;
 
 	i = 0;
 	t = (unsigned char *)s;

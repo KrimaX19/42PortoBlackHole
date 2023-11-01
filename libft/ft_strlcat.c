@@ -43,10 +43,10 @@ size_t	ft_strlcat(char *dst, char *src, size_t size)
 		return (len_src + size);
 	}
 	while (src[j] != '\0' && len_dst + j < (size - 1))
-		{
-			dst[len_dst + j] = src[j];
-			j++;
-		}
+	{
+		dst[len_dst + j] = src[j];
+		j++;
+	}
 	dst[len_dst + j] = '\0';
 	return (len_dst + len_src);
 }
