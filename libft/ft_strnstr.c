@@ -8,16 +8,20 @@ se a pequena for > que a grande e retornado NULL, caso contrario return ponteiro
 #include <unistd.h>
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
-{
-	if (*little)
+{:
+	if (!*big && !len)
+	{
+		return (NULL);
+	}
+	if (!*little)
 	{
 		return ((char *)big);
 	}
-	while (*little != '\0' || *little == (char)len)
+	while (*big == *little && *big <= (char)len)
 	{
-		if (*big == '\0')
+		if (!*little)
 		{
-			return (NULL);
+			return ((char *) big);
 		}
 		little++;
 		big++;
