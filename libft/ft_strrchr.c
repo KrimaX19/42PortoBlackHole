@@ -15,31 +15,22 @@ int	contar(const char *s)
 	return (i);
 }
 */	
-char	*ft_strrchr (const char *s, int c)
+char	*ft_strrchr(const char *s, int c)
 {
-	const char *r = s;
+	const char	*r;
 
-	if (c == '\0')
+	r = NULL;
+	while (*s)
 	{
-		return ("");
-	}
-	while (*s != '\0')
-	{
-		if (*s == (char)c)
+		if (*s == (unsigned char)c)
 		{
-			r = (char *)s;
+			r = ((const char *)s);
 		}
 		s++;
 	}
-	if (*r != '\0')
+	if (c == 0)
 	{
-		return (char *)r;
+		return ((char *)s);
 	}
-	return (NULL);
+	return  ((char *)r);
 }
-/*	if (c == '\0')
-	{
-		return (char *)s;
-	}
-	return (NULL);*/
-

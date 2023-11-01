@@ -8,7 +8,7 @@ Retorna o valor ou 0 se der erro
 #include <unistd.h>
 
 int	ft_atoi(const char *nptr)
-{ 
+{
 	long int	a;
 
 	while (*nptr != '\0')
@@ -21,8 +21,8 @@ int	ft_atoi(const char *nptr)
 		}
 		else
 		{
-		return (0);
+			return (0);
 		}
 	}
 	return (a);
-}		
+}
