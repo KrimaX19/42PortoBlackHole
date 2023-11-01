@@ -21,30 +21,54 @@ is forbidden.
 • Your libft.a has to be created at the root of your repository
 
 Funcoes
-
-• isalpha - ft_isalpha - need to check norminette
-• isdigit - ft_isdigit - need to check norminette
-• isalnum - ft_isalnum - need to check norminette
-• isascii - ft_isascii - need to check norminette
-• isprint - ft_isprint - need to check norminette
-• strlen - ft_strlen - need to check norminette
-• toupper - ft_toupper - need to check norminette
-• tolower - ft_tolower - need to check norminette
-• strlcpy - ft_strlcpy - need to retest - need to check norminette
-• strlcat - ft_strlcat - need to check norminette
-• memset - ft_memset - need to check norminette
-• bzero - ft_bzero - need tocheck norminette
-• memcpy - ft_memcpy - need to check norminette
-• memmove - dt_memmove - need to check norminette
-• memchr - ft_memchr - need to check norminette
-• memcmp - 
-• strchr
-• strrchr
-• strncmp
-• strnstr
-• atoi
+Parte 1:
+• isalpha - ft_isalpha - OK
+• isdigit - ft_isdigit - OK
+• isalnum - ft_isalnum - OK
+• isascii - ft_isascii - OK
+• isprint - ft_isprint - OK
+• strlen - ft_strlen - OK
+• toupper - ft_toupper - OK
+• tolower - ft_tolower - OK
+• strlcpy - ft_strlcpy - OK
+• strlcat - ft_strlcat - OK
+• memset - ft_memset - OK
+• bzero - ft_bzero - OK
+• memcpy - ft_memcpy - Crash
+• memmove - ft_memmove - Crash
+• memchr - ft_memchr - OK
+• memcmp - ft_memchr - OK
+• strchr - ft_strchr - OK
+• strrchr - 
+• strncmp - 
+• strnstr - 
+• atoi - 
 
 Usar malloc() com estas2 funcoes:
 
 • calloc
 • strdup
+
+Parte 2:
+• substr - 
+• srtjoin - 
+• srttrim
+• split
+• itoa
+• strmapi
+• striteri
+• putchar_fd
+• putstr_fd
+• putendl_fd
+• putnbr_fd
+
+Bonus:
+• lstnew
+• lsadd_front
+• lstsize
+• lstlast
+• lstadd_back
+• lstdelone
+• lstclear
+• lstiter
+• lstmap
