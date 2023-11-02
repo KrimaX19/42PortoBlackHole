@@ -6,7 +6,7 @@
 /*   By: rusoares <rusoares@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 17:46:56 by rusoares          #+#    #+#             */
-/*   Updated: 2023/11/02 18:26:29 by rusoares         ###   ########.fr       */
+/*   Updated: 2023/11/02 18:56:03 by rusoares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,11 @@
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	while (*s1 != (char)n)
+	if (n == 0)
+	{
+		return (0);
+	}
+	while (*s1 != (const char)n)
 	{
 		if (*s1 != *s2)
 		{
