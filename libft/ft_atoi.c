@@ -1,9 +1,14 @@
-/*
-converte a porcao inicial de uma string apontada por nptr para int
-retorna um long
-
-Retorna o valor ou 0 se der erro
-*/
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: rusoares <rusoares@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/11/02 18:26:09 by rusoares          #+#    #+#             */
+/*   Updated: 2023/11/02 18:26:13 by rusoares         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include <unistd.h>
 

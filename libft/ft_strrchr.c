@@ -6,7 +6,7 @@
 /*   By: rusoares <rusoares@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 17:47:13 by rusoares          #+#    #+#             */
-/*   Updated: 2023/11/02 17:47:17 by rusoares         ###   ########.fr       */
+/*   Updated: 2023/11/02 18:27:56 by rusoares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,5 +29,5 @@ char	*ft_strrchr(const char *s, int c)
 	{
 		return ((char *)s);
 	}
-	return  ((char *)r);
+	return ((char *)r);
 }
