@@ -3,17 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: rusoares <rusoares@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/02 14:27:02 by rusoares          #+#    #+#             */
-/*   Updated: 2023/10/21 17:40:22 by marvin           ###   ########.fr       */
+/*   Updated: 2023/11/02 17:46:40 by rusoares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
-#include <unistd.h>
-#include <stdio.h>
-*/
 #include <unistd.h>
 
 size_t	ft_strlcpy(char *dst, char *src, size_t size)

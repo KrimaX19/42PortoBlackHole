@@ -1,10 +1,14 @@
-/*
-compara 2 strings a comparacao e feita usando unsigned char.
-retorna um inteiro indicando o resultado da comparacao
-0 se s1 e s2 sao iguais
-valor negativo se s1 < s2
-valor positivo se s1 > s2
-*/
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: rusoares <rusoares@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/11/02 17:46:56 by rusoares          #+#    #+#             */
+/*   Updated: 2023/11/02 17:48:00 by rusoares         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include <unistd.h>
 

@@ -1,14 +1,19 @@
-/*
-procura a primeira ocurrencia do terminador na string pequena na mesma posicao da string grande.
-o que aparecer depois do '\0' nao e procurado.
-se a str pequena for vazio a grande e retornada.
-se a pequena for > que a grande e retornado NULL, caso contrario return ponteiro para posicao pequena
-*/
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: rusoares <rusoares@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/11/02 17:47:04 by rusoares          #+#    #+#             */
+/*   Updated: 2023/11/02 17:47:29 by rusoares         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include <unistd.h>
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
-{:
+{
 	if (!*big && !len)
 	{
 		return (NULL);

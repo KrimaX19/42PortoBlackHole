@@ -1,20 +1,17 @@
-/* retorna um ponteiro para a ultima ocorrencia de c na string s. */
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: rusoares <rusoares@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/11/02 17:47:13 by rusoares          #+#    #+#             */
+/*   Updated: 2023/11/02 17:47:17 by rusoares         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include <unistd.h>
-/*
-int	contar(const char *s)
-{
-	int	i;
 
-	i = 0;
-	while (*s != '\0')
-	{
-		i++;
-		s++;
-	}
-	return (i);
-}
-*/	
 char	*ft_strrchr(const char *s, int c)
 {
 	const char	*r;
