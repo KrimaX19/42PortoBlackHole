@@ -40,7 +40,7 @@ Parte 1:
 • memcmp - ft_memchr - OK
 • strchr - ft_strchr - OK
 • strrchr - ft_strrchr - NOK
-• strncmp - ft_strncmp - NOK
+• strncmp - ft_strncmp - OK
 • strnstr - ft_strnstr - NOK
 • atoi - ft_atoi.c - NOK
 

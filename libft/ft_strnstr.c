@@ -6,7 +6,7 @@
 /*   By: rusoares <rusoares@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 17:47:04 by rusoares          #+#    #+#             */
-/*   Updated: 2023/11/02 18:25:16 by rusoares         ###   ########.fr       */
+/*   Updated: 2023/11/02 21:19:04 by rusoares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,22 +14,20 @@
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
-	if (!*big && !len)
-	{
-		return (NULL);
-	}
+	size_t	i;
+
+	i = 0;
 	if (!*little)
 	{
 		return ((char *)big);
 	}
-	while (*big == *little && *big <= (char)len)
+	while (i != len)
 	{
-		if (!*little)
+		if (little[i] == '\0')
 		{
-			return ((char *) big);
+			return ((char *)big + i);
 		}
-		little++;
-		big++;
+		i++;
 	}
 	return ((char *)little);
 }
