@@ -47,7 +47,7 @@ Parte 1:
 Usar malloc() com estas2 funcoes:
 
 • calloc - ft_calloc.c - 
-• strdup
+• strdup - 
 
 Parte 2:
 • substr - 
