@@ -6,28 +6,41 @@
 /*   By: rusoares <rusoares@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 17:47:04 by rusoares          #+#    #+#             */
-/*   Updated: 2023/11/02 21:19:04 by rusoares         ###   ########.fr       */
+/*   Updated: 2023/11/03 21:04:16 by rusoares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
+#include <libft.h>
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
-	size_t	i;
+size_t	i;
+size_t	j;
+size_t	k;
 
-	i = 0;
-	if (!*little)
+i = 0;
+k = 0;
+while (little[k] != '\0')
+{
+	k++;
+}
+if (!*little)
+{
+	return ((char *)big);
+}
+while (big[i] != '\0' && i < len)
+{
+	j = 0;
+	while (big[i+j] == little[j] &&little[j] != '\0' && (i+j) < len)
 	{
-		return ((char *)big);
+		j++;
 	}
-	while (i != len)
+	if (j == k)
 	{
-		if (little[i] == '\0')
-		{
-			return ((char *)big + i);
-		}
-		i++;
+		return ((char *)(big + i));
 	}
-	return ((char *)little);
+	i++;
+}
+return (NULL);
 }
