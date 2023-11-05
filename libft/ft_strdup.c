@@ -6,7 +6,7 @@
 /*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/05 17:12:19 by codespace         #+#    #+#             */
-/*   Updated: 2023/11/05 17:15:54 by codespace        ###   ########.fr       */
+/*   Updated: 2023/11/05 18:09:45 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,34 @@ It returns  NULL  if insufficient memory was available, with errno set to indica
 the cause of the error.
 */
 #include <unistd.h>
+#include <stdio.h>
 
-char    *strdup(const char *s)
+size_t    ft_strlen(const char *s)
 {
-    
+    int i;
+
+    i = 0;
+    while (*s++)
+    {
+        i++;
+    }
+    return (i);
+}
+
+char    *ft_strdup(const char *s)
+{
+    char    *dup;
+    int     i;
+
+    i = 0;
+    if (!(dup = (char*)malloc(sizeof(char) * ft_strlen(s) + 1)))
+    {
+        return (NULL);
+    }
+    while (*s)
+    {
+        dup[i++] = *s++;
+    }
+    dup[i] = '\0';
+    return (dup);
 }
