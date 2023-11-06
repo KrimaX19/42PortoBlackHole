@@ -34,20 +34,20 @@ Parte 1:
 • strlcat - ft_strlcat - OK
 • memset - ft_memset - OK
 • bzero - ft_bzero - OK
-• memcpy - ft_memcpy - Crash
-• memmove - ft_memmove - Crash
+• memcpy - ft_memcpy - OK
+• memmove - ft_memmove - OK
 • memchr - ft_memchr - OK
 • memcmp - ft_memchr - OK
-• strchr - ft_strchr - NOK
-• strrchr - ft_strrchr - NOK
+• strchr - ft_strchr - OK
+• strrchr - ft_strrchr - OK
 • strncmp - ft_strncmp - OK
-• strnstr - ft_strnstr - NOK
-• atoi - ft_atoi.c - NOK
+• strnstr - ft_strnstr - OK
+• atoi - ft_atoi.c - OK
 
 Usar malloc() com estas2 funcoes:
 
-• calloc - ft_calloc.c - 
-• strdup - 
+• calloc - ft_calloc.c - OK
+• strdup - ft_strdup.c - OK
 
 Parte 2:
 • substr - 
