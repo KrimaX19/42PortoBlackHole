@@ -6,7 +6,7 @@
 /*   By: rusoares <rusoares@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/06 12:29:08 by rusoares          #+#    #+#             */
-/*   Updated: 2023/11/02 18:28:06 by rusoares         ###   ########.fr       */
+/*   Updated: 2023/11/06 19:26:27 by rusoares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,10 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 
 	d = (unsigned char *)dest;
 	s = (unsigned char *)src;
+	if (!dest && !src)
+	{
+		return (0);
+	}
 	while (n > 0)
 	{
 		*d++ = *s++;

@@ -37,7 +37,8 @@ ft_strrchr.c \
 ft_strncmp.c \
 ft_strnstr.c \
 ft_atoi.c \
-ft_calloc.c
+ft_calloc.c \
+ft_strdup.c
 
 OBJS = $(SRCS:.c=.o)
 

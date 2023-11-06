@@ -6,7 +6,7 @@
 /*   By: rusoares <rusoares@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/06 12:47:27 by rusoares          #+#    #+#             */
-/*   Updated: 2023/11/02 18:28:10 by rusoares         ###   ########.fr       */
+/*   Updated: 2023/11/06 18:49:20 by rusoares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 
 	t = (char *)src;
 	dst = (char *)dest;
+	if (!dst && !t)
+		return (0);
 	if (dst < t && t < dst + n)
 	{
 		while (n--)

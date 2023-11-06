@@ -6,7 +6,7 @@
 /*   By: rusoares <rusoares@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 18:26:09 by rusoares          #+#    #+#             */
-/*   Updated: 2023/11/03 22:43:25 by rusoares         ###   ########.fr       */
+/*   Updated: 2023/11/06 19:26:01 by rusoares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,32 +15,28 @@
 int	ft_atoi(const char *nptr)
 {
 	long int	a;
-	int	i;
-	int s;
+	int			s;
 
-	i = 0;
 	s = 1;
-	while ((nptr[i] == ' ') || (nptr[i] >= 9 && nptr[i] <= 13))
+	while ((*nptr == ' ') || (*nptr >= 9 && *nptr <= 13))
+		nptr++;
+	if (*nptr == '-' || *nptr == '+')
 	{
-		i++;
+		if (*nptr == '-')
+			s = -1;
+		nptr++;
 	}
-	if (nptr[i] == '-')
+	if (*nptr >= '0' && *nptr <= '9')
 	{
-	s = -1;
-	i++;
-	}
-	if (nptr[i] >= '0' &&  nptr[i] <= '9')
-	{
-		a = (nptr[i] - '0');
-		i++;
-		while (nptr[i] >= '0' &&  nptr[i] <= '9')
+		a = (*nptr - '0');
+		nptr++;
+		while (*nptr >= '0' && *nptr <= '9')
 		{
-		a *= 10;
-		a += nptr[i] - '0';
-		i++;
+			a *= 10;
+			a += *nptr - '0';
+			nptr++;
 		}
-	return (a *(s));
+		return (a *(s));
 	}
-return (0);
+	return (0);
 }
-

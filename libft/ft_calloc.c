@@ -6,7 +6,7 @@
 /*   By: rusoares <rusoares@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 17:43:44 by rusoares          #+#    #+#             */
-/*   Updated: 2023/11/02 18:55:52 by rusoares         ###   ########.fr       */
+/*   Updated: 2023/11/06 18:37:51 by rusoares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,11 @@ void	*ft_calloc(size_t nmemb, size_t size)
 {
 	void	*p;
 
-	p = (void *)malloc(nmemb * size);
+	p = malloc(nmemb * size);
 	if (!p)
 	{
-		return (NULL);
+		return (p);
 	}
-	ft_bzero(p, nmemb);
+	ft_bzero(p, nmemb * size);
 	return (p);
 }
