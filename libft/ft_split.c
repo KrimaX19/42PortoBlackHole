@@ -1,35 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rusoares <rusoares@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/05 17:12:19 by rusoares          #+#    #+#             */
-/*   Updated: 2023/11/07 21:03:57 by rusoares         ###   ########.fr       */
+/*   Created: 2023/11/07 20:58:20 by rusoares          #+#    #+#             */
+/*   Updated: 2023/11/07 21:15:51 by rusoares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <libft.h>
 
-char	*ft_strdup(const char *s)
+char	**ft_split(char const *s, char c)
 {
-	char	*dup;
-	int		i;
-
-	i = 0;
-	dup = (char *)malloc(sizeof(char) * ft_strlen(s) + 1);
-	if (!dup)
-	{
-		return (NULL);
-	}
-	while (*s)
-	{
-		dup[i++] = *s++;
-	}
-	dup[i] = '\0';
-	return (dup);
+    //s = a string a ser separada
+    //c = o que vai delimitar a string
+    return (resultado);//retorna um array com os valores
+    r = '\0'//array deve ser terminado '\0'
+    return (NULL);//falha na alocacao
 }

@@ -1,35 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rusoares <rusoares@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/05 17:12:19 by rusoares          #+#    #+#             */
-/*   Updated: 2023/11/07 21:03:57 by rusoares         ###   ########.fr       */
+/*   Created: 2023/11/07 21:04:10 by rusoares          #+#    #+#             */
+/*   Updated: 2023/11/07 21:05:09 by rusoares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <libft.h>
-
-char	*ft_strdup(const char *s)
+char	*ft_itoa(int n)
 {
-	char	*dup;
-	int		i;
 
-	i = 0;
-	dup = (char *)malloc(sizeof(char) * ft_strlen(s) + 1);
-	if (!dup)
-	{
-		return (NULL);
-	}
-	while (*s)
-	{
-		dup[i++] = *s++;
-	}
-	dup[i] = '\0';
-	return (dup);
 }

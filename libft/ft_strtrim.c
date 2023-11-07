@@ -1,35 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rusoares <rusoares@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/05 17:12:19 by rusoares          #+#    #+#             */
-/*   Updated: 2023/11/07 21:03:57 by rusoares         ###   ########.fr       */
+/*   Created: 2023/11/07 20:12:39 by rusoares          #+#    #+#             */
+/*   Updated: 2023/11/07 20:57:02 by rusoares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <stdio.h>
-#include <stdlib.h>
 #include <libft.h>
 
-char	*ft_strdup(const char *s)
+char	*ft_strtrim(char const *s1, char const *set)
 {
-	char	*dup;
+	char	*r;
 	int		i;
+	int		f;
+	int		len;
 
 	i = 0;
-	dup = (char *)malloc(sizeof(char) * ft_strlen(s) + 1);
-	if (!dup)
+	f = ft_strlen(s1) - 1;
+	while (s1[i] && ft_strchr(set, s1[i]))
+	{
+		i++;
+	}
+	while (f >= 0 && ft_strchr (set, s1[f]))
+	{
+		f--;
+	}
+	len = f - i + 1;
+	r = (char *)malloc(len + 1);
+	if (r == NULL)
 	{
 		return (NULL);
 	}
-	while (*s)
-	{
-		dup[i++] = *s++;
-	}
-	dup[i] = '\0';
-	return (dup);
+	ft_strlcpy (r, (char *)s1 + i, len + 1);
+	return (r);
 }
