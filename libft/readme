@@ -50,10 +50,10 @@ Usar malloc() com estas2 funcoes:
 • strdup - ft_strdup.c - OK
 
 Parte 2:
-• substr - 
-• srtjoin - 
-• srttrim
-• split
+• substr - ft_substr.c - NOK
+• srtjoin - ft_strjoin - OK
+• srttrim - ft_strtrim - NOK
+• split - ft_split - NOK
 • itoa
 • strmapi
 • striteri
