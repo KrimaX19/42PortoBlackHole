@@ -6,7 +6,7 @@
 /*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 12:21:06 by codespace         #+#    #+#             */
-/*   Updated: 2023/11/07 12:37:10 by codespace        ###   ########.fr       */
+/*   Updated: 2023/11/07 12:38:33 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	strjoin(const char *str1, const char *str2)
 	char *cpy;
 
 	dst = (char)malloc(sizeof(dst) * (ft_strlen(str1)+ft_strlen(str2) + 1));
-	if (dst && str1 & str2)
+	if (dst && *str1 & *str2)
 	{
 		cpy = dst;
 		while (*str1 != '\0')
