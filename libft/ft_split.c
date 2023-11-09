@@ -6,7 +6,7 @@
 /*   By: rusoares <rusoares@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 20:58:20 by rusoares          #+#    #+#             */
-/*   Updated: 2023/11/09 20:51:35 by rusoares         ###   ########.fr       */
+/*   Updated: 2023/11/09 22:42:18 by rusoares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ int		contar(char const *s, char c)
 		{
 			j++;
 		}
+		i++;
 	}
 	return (j);
 }
@@ -42,7 +43,7 @@ char	**ft_split(char const *s, char c)
 	i = 0;
 	j = 0;
 	t = NULL;
-	r = (char **)malloc(contar(s,c) * sizeof(char*) + 1);
+	r = (char **)malloc(ft_strlen(s) - contar(s,c) * sizeof(char*) + 1);
 	if ( r == NULL)
 	{
 		return (NULL);
