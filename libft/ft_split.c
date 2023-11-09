@@ -6,16 +6,58 @@
 /*   By: rusoares <rusoares@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 20:58:20 by rusoares          #+#    #+#             */
-/*   Updated: 2023/11/07 21:15:51 by rusoares         ###   ########.fr       */
+/*   Updated: 2023/11/09 20:51:35 by rusoares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <libft.h>
 
+int		contar(char const *s, char c)
+{
+	int		i;
+	int		j;
+	
+	i = 0;
+	j = 0;	
+	while (s[i] != '\0')
+	{
+		if (s[i] != c)
+		{
+			i++;
+		}
+		else
+		{
+			j++;
+		}
+	}
+	return (j);
+}
 char	**ft_split(char const *s, char c)
 {
-    //s = a string a ser separada
-    //c = o que vai delimitar a string
-    return (resultado);//retorna um array com os valores
-    r = '\0'//array deve ser terminado '\0'
-    return (NULL);//falha na alocacao
+	int		i;
+	int		j;
+	char	**t;	
+	char	**r;
+
+	i = 0;
+	j = 0;
+	t = NULL;
+	r = (char **)malloc(contar(s,c) * sizeof(char*) + 1);
+	if ( r == NULL)
+	{
+		return (NULL);
+	}
+	while (s[i] != '\0')
+	{
+		if (s[i] == c)
+		{
+			ft_memcpy(*r, *t,j);
+			j = 0;
+			i++;
+		}
+		*t[j] = s[i];
+		i++;
+		j++;
+	}
+    return (r);
 }

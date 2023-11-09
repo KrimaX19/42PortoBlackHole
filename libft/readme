@@ -47,12 +47,12 @@ Parte 1:
 Usar malloc() com estas2 funcoes:
 
 • calloc - ft_calloc.c - OK
-• strdup - ft_strdup.c - OK
+• strdup - ft_strdup.c - NOK - free() invalid pointer
 
 Parte 2:
-• substr - ft_substr.c - NOK
+• substr - ft_substr.c - NOK - Empty string | start >= ft_strlen
 • srtjoin - ft_strjoin - OK
-• srttrim - ft_strtrim - NOK
+• srttrim - ft_strtrim - NOK - Full blank input
 • split - ft_split - NOK
 • itoa
 • strmapi
