@@ -1,40 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rusoares <rusoares@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/07 20:12:39 by rusoares          #+#    #+#             */
-/*   Updated: 2023/11/10 22:24:40 by rusoares         ###   ########.fr       */
+/*   Created: 2023/11/10 22:43:47 by rusoares          #+#    #+#             */
+/*   Updated: 2023/11/10 23:23:42 by rusoares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <unistd.h>
 #include <libft.h>
 
-char	*ft_strtrim(char const *s1, char const *set)
+void	ft_putnbr_fd(int n, int fd)
 {
-	unsigned int	len;
-	char			*r;
-	unsigned int	i;
-	int				f;
+	unsigned long	nb;
 
-	i = 0;
-	f = ft_strlen(s1) - 1;
-	while (s1[i] && ft_strchr(set, s1[i]))
+	nb = n;
+	if (nb < 0)
 	{
-		i++;
+		ft_putchar_fd('-', fd);
+		nb = -1 *nb;
 	}
-	while (f >= 0 && ft_strchr (set, s1[f]))
+	if (nb >= 10)
 	{
-		f--;
+		ft_putchar_fd(nb / 10, fd);
+		ft_putchar_fd(nb % 10,fd);
 	}
-	len = f - i + 1 ;
-	r = malloc(len + 1);
-	if (r == NULL)
-	{
-		return (NULL);
-	}
-	ft_strlcpy (r, (char *)s1 + i, len + 1);
-	return (r);
+	ft_putchar_fd(nb + 48, fd);
 }

@@ -1,40 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rusoares <rusoares@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/07 20:12:39 by rusoares          #+#    #+#             */
-/*   Updated: 2023/11/10 22:24:40 by rusoares         ###   ########.fr       */
+/*   Created: 2023/11/10 22:38:11 by rusoares          #+#    #+#             */
+/*   Updated: 2023/11/10 22:40:14 by rusoares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <unistd.h>
 #include <libft.h>
 
-char	*ft_strtrim(char const *s1, char const *set)
+void	ft_putendl_fd(char *s, int fd)
 {
-	unsigned int	len;
-	char			*r;
-	unsigned int	i;
-	int				f;
-
-	i = 0;
-	f = ft_strlen(s1) - 1;
-	while (s1[i] && ft_strchr(set, s1[i]))
+	if (fd > 0)
 	{
-		i++;
+		while (*s)
+		{
+			ft_putchar_fd(*s,fd);
+			s++;
+		}
+		ft_putchar_fd('\n', fd);
 	}
-	while (f >= 0 && ft_strchr (set, s1[f]))
-	{
-		f--;
-	}
-	len = f - i + 1 ;
-	r = malloc(len + 1);
-	if (r == NULL)
-	{
-		return (NULL);
-	}
-	ft_strlcpy (r, (char *)s1 + i, len + 1);
-	return (r);
 }

@@ -6,11 +6,17 @@
 /*   By: rusoares <rusoares@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 21:12:18 by rusoares          #+#    #+#             */
-/*   Updated: 2023/11/07 21:12:53 by rusoares         ###   ########.fr       */
+/*   Updated: 2023/11/10 22:31:11 by rusoares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <unistd.h>
+
 void	ft_putchar_fd(char c, int fd)
 {
-
+    if (fd > 0)
+    {
+        write(fd,&c,1);
+    }
 }
+

@@ -6,45 +6,39 @@
 /*   By: rusoares <rusoares@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 19:50:16 by rusoares          #+#    #+#             */
-/*   Updated: 2023/11/09 22:36:40 by rusoares         ###   ########.fr       */
+/*   Updated: 2023/11/10 20:57:42 by rusoares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 #include <stdlib.h>
 #include <stdio.h>
+#include <string.h>
 #include <libft.h>
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char		*sub;
-	char	*str;
-	char	*begin;
+	unsigned int	o;
+	size_t			i;
+	char		*str;
 
-	str = (char *)s;
-	begin = str + (start);
-	if (ft_strlen(s) < start)
-	{
-        sub = ft_calloc(1, sizeof(char));
-		return (sub);
-	}
-	sub = ft_calloc(len + 1, sizeof(char));
-	if (sub == NULL)
-	{
+	o = (unsigned int)len;
+	i = -1;
+	if (!s)
 		return (NULL);
-	}
-	if (str == NULL)
+	if (o == 0 || start >= ft_strlen(s))
 	{
-		return (sub);
+		str = malloc(sizeof(char));
+		str[0] = '\0';
+		return (str);
 	}
-   /* size_t i = 0;
-    while (*str &&( i < len))
-    {
-        sub[i] = *begin;
-        i++;
-        begin++;
-    }
-	*/memcpy(sub, begin, len);
-	sub[len] = '\0';
-	return (sub);
+	if ((start + o) > ft_strlen(s))
+		o = ft_strlen(s) - start;
+	str = malloc(sizeof(char) * (o + 1));
+	if (!str)
+		return (NULL);
+	while (++i < o)
+		str[i] = s[i + start];
+	str[i] = '\0';
+	return (str);
 }

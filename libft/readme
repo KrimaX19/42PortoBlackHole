@@ -44,23 +44,23 @@ Parte 1:
 • strnstr - ft_strnstr - OK
 • atoi - ft_atoi.c - OK
 
-Usar malloc() com estas2 funcoes:
+Usar malloc() com estas funcoes:
 
 • calloc - ft_calloc.c - OK
 • strdup - ft_strdup.c - NOK - free() invalid pointer
 
 Parte 2:
-• substr - ft_substr.c - NOK - Empty string | start >= ft_strlen
+• substr - ft_substr.c - OK
 • srtjoin - ft_strjoin - OK
 • srttrim - ft_strtrim - NOK - Full blank input
-• split - ft_split - NOK
-• itoa
-• strmapi
-• striteri
-• putchar_fd
-• putstr_fd
-• putendl_fd
-• putnbr_fd
+• split - ft_split - NOK - 
+• itoa - ft_iota - NOK - 
+• strmapi - ft_strmapi - NOK - 
+• striteri - ft_striteri - NOK - 
+• putchar_fd - ft_putchar_fd - OK
+• putstr_fd - ft_putstr_fd - OK
+• putendl_fd - ft_putendl_fd - OK
+• putnbr_fd - ft_putnbr_fd - NOK - 
 
 Bonus:
 • lstnew
