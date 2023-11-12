@@ -52,7 +52,7 @@ Usar malloc() com estas funcoes:
 Parte 2:
 • substr - ft_substr.c - OK
 • srtjoin - ft_strjoin - OK
-• srttrim - ft_strtrim - NOK - Full blank input
+• srttrim - ft_strtrim - NOK - Malloc size
 • split - ft_split - NOK - 
 • itoa - ft_iota - NOK - 
 • strmapi - ft_strmapi - NOK - 
@@ -60,7 +60,7 @@ Parte 2:
 • putchar_fd - ft_putchar_fd - OK
 • putstr_fd - ft_putstr_fd - OK
 • putendl_fd - ft_putendl_fd - OK
-• putnbr_fd - ft_putnbr_fd - NOK - 
+• putnbr_fd - ft_putnbr_fd - OK
 
 Bonus:
 • lstnew
