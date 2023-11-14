@@ -3,39 +3,99 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: rusoares <rusoares@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 20:58:20 by rusoares          #+#    #+#             */
-/*   Updated: 2023/11/11 18:57:35 by marvin           ###   ########.fr       */
+/*   Updated: 2023/11/14 11:06:46 by rusoares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
+//contar as palavras com um contador entre caracteres,
+//assim consigo saber quantas palavras tenho entre o char c
+int contar(const char *s, char c)
+{
+    int i;
+    int j;
 
+    i = 0;
+    j = 0;
+    while(*s != '\0')
+	{
+		if(*s != c && j == 0) 
+		{
+			j = 1;
+			i++;
+		}
+		if(*s == c)
+		{
+			j = 0;			
+		}
+		s++;
+	}
+	return(i);
+}
+/*
 char	**ft_split(char const *s, char c)
 {
-	//returnar um double pointer para as palavras separadas
-	// alocar memortia para o numero de palavras
-	//alocar memoria para cada char da palavra
-	//posso usar a substr para usar o inicio e o fim da substr
+	char	**split;
+	int		start;
+	size_t		i;
+	size_t		j;
 
-	char **split;
-	int	i = 0;//incrementador de letras
-	int	j = 0;//incrementador de palavras
-
-	*split = s;
-	if (!s)
-		return (NULL);
-	while (s[i] != '\0')
+	i = 0;
+	j = 0;
+	split = NULL;
+	if(!s || !(split == malloc((contar(s, c) + 1) * sizeof(char*))))
 	{
-		if (s[i] == c)
+		return (NULL);
+	}
+	start = -1;
+	while (i <= ft_strlen(s))
+	{
+		if(s[i] != c && start < 0)
 		{
-			*split[k] = malloc(sizeof(char*) * i - j);
-			j = i;
+			start = i;
+		}
+		else if ((s[i] == c || i == strlen(s)) && (start >= 0))
+		{
+			split[j++] = ft_substr(s, start, i - start);
+			start = -1;
 		}
 		i++;
 	}
+	split[j] = 0;
+	return (split);	
+}*/
+char        **ft_split(char const *s, char c)
+{
+    size_t    i;
+    size_t    j;
+    int        start;
+    char    **split;
+
+    i = 0;
+    j = 0;
+    if (!s || !(split = malloc((contar(s, c) + 1) * sizeof(char*))))
+      return (0);
+    start = -1;
+    while (i <= strlen(s))
+    {
+        if(s[i] != c && start < 0)
+        {
+            start = i;
+        }
+        else if ((s[i] == c || i == strlen(s)) && (start >= 0))
+        {
+            split[j++] = ft_substr(s, start, i - start);
+            start = -1;
+        }
+        i++;
+    }
+    split[j] = 0;
+    return (split);    
 }
+
 /*
 int	contar(char const *s, char c)
 {
