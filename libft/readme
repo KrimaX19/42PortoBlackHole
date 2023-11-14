@@ -54,9 +54,9 @@ Parte 2:
 • srtjoin - ft_strjoin - OK
 • srttrim - ft_strtrim - NOK - Malloc size
 • split - ft_split - OK
-• itoa - ft_iota - NOK - 
-• strmapi - ft_strmapi - NOK - 
-• striteri - ft_striteri - NOK - 
+• itoa - ft_iota - OK
+• strmapi - ft_strmapi - OK
+• striteri - ft_striteri - OK
 • putchar_fd - ft_putchar_fd - OK
 • putstr_fd - ft_putstr_fd - OK
 • putendl_fd - ft_putendl_fd - OK

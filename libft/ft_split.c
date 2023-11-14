@@ -6,13 +6,13 @@
 /*   By: rusoares <rusoares@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 20:58:20 by rusoares          #+#    #+#             */
-/*   Updated: 2023/11/14 20:11:04 by rusoares         ###   ########.fr       */
+/*   Updated: 2023/11/14 22:09:58 by rusoares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
 
-int	contar(const char *s, char c)
+int	cont(const char *s, char c)
 {
 	int	i;
 	int	j;
@@ -44,15 +44,15 @@ char	**ft_split(char const *s, char c)
 
 	i = 0;
 	j = 0;
-	split = malloc ((contar(s, c) + 1) * sizeof (char *));
+	split = malloc ((cont(s, c) + 1) * sizeof (char *));
 	if (!s || !split)
 		return (0);
 	start = -1;
-	while (i <= strlen(s))
+	while (i <= ft_strlen(s))
 	{
 		if (s[i] != c && start < 0)
 			start = i;
-		else if ((s[i] == c || i == strlen(s)) && (start >= 0))
+		else if ((s[i] == c || i == ft_strlen(s)) && (start >= 0))
 		{
 			split[j++] = ft_substr(s, start, i - start);
 			start = -1;
