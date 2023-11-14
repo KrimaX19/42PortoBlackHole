@@ -47,13 +47,13 @@ Parte 1:
 Usar malloc() com estas funcoes:
 
 • calloc - ft_calloc.c - OK
-• strdup - ft_strdup.c - NOK - free() invalid pointer
+• strdup - ft_strdup.c - OK
 
 Parte 2:
 • substr - ft_substr.c - OK
 • srtjoin - ft_strjoin - OK
 • srttrim - ft_strtrim - NOK - Malloc size
-• split - ft_split - NOK - 
+• split - ft_split - OK
 • itoa - ft_iota - NOK - 
 • strmapi - ft_strmapi - NOK - 
 • striteri - ft_striteri - NOK - 
