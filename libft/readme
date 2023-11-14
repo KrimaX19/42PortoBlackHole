@@ -57,10 +57,10 @@ Parte 2:
 • itoa - ft_iota - OK
 • strmapi - ft_strmapi - OK
 • striteri - ft_striteri - OK
-• putchar_fd - ft_putchar_fd - OK
-• putstr_fd - ft_putstr_fd - OK
-• putendl_fd - ft_putendl_fd - OK
-• putnbr_fd - ft_putnbr_fd - OK
+• putchar_fd - ft_putchar_fd - OK/NOK
+• putstr_fd - ft_putstr_fd - OK/NOK
+• putendl_fd - ft_putendl_fd - OK/NOK
+• putnbr_fd - ft_putnbr_fd - OK/NOK
 
 Bonus:
 • lstnew
