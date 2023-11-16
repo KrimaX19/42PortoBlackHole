@@ -63,12 +63,12 @@ Parte 2:
 • putnbr_fd - ft_putnbr_fd - OK/NOK
 
 Bonus:
-• lstnew
-• lsadd_front
-• lstsize
-• lstlast
-• lstadd_back
-• lstdelone
-• lstclear
-• lstiter
-• lstmap
+• lstnew - ok
+• lsadd_front - ok
+• lstsize - ok
+• lstlast - ok
+• lstadd_back - ok
+• lstdelone - ok
+• lstclear - ok
+• lstiter - ok
+• lstmap - ok
