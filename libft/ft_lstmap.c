@@ -1,40 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rusoares <rusoares@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/07 20:12:39 by rusoares          #+#    #+#             */
-/*   Updated: 2023/11/16 22:00:16 by rusoares         ###   ########.fr       */
+/*   Created: 2023/11/16 18:25:23 by rusoares          #+#    #+#             */
+/*   Updated: 2023/11/16 22:01:50 by rusoares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
 
-char	*ft_strtrim(char const *s1, char const *set)
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	unsigned int	len;
-	char			*r;
-	unsigned int	i;
-	int				f;
+	t_list	*j;
+	t_list	*i;
 
-	i = 0;
-	f = ft_strlen(s1) - 1;
-	while (s1[i] && ft_strchr (set, s1[i]))
+	j = 0;
+	while (lst)
 	{
-		i++;
+		i = ft_lstnew(f(lst->content));
+		if (!i)
+		{
+			ft_lstclear(&j, del);
+			return (0);
+		}
+		ft_lstadd_back(&j, i);
+		lst = lst->next;
 	}
-	while (f >= 0 && ft_strchr (set, s1[f]))
-	{
-		f--;
-	}
-	len = f - i + 1 ;
-	r = malloc(len + 1);
-	if (r == NULL)
-	{
-		return (NULL);
-	}
-	ft_strlcpy (r, (char *)s1 + i, len + 1);
-	return (r);
+	return (j);
 }

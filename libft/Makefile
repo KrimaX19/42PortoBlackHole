@@ -1,19 +1,15 @@
 # **************************************************************************** #
-# #                                                                              #
-# #                                                         :::      ::::::::    #
-# #    MAKEFILE                                           :+:      :+:    :+:    #
-# #                                                     +:+ +:+         +:+      #
-# #    By: marvin <marvin@student.42.fr>              +#+  +:+       +#+         #
-# #                                                 +#+#+#+#+#+   +#+            #
-# #    Created: 2023/10/26 14:06:05 by marvin            #+#    #+#              #
-# #    Updated: 2023/10/26 14:06:05 by marvin           ###   ########.fr        #
-# #                                                                              #
-# # **************************************************************************** #
-#
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: rusoares <rusoares@student.42.fr>          +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2023/11/16 18:16:48 by rusoares          #+#    #+#              #
+#    Updated: 2023/11/16 18:16:48 by rusoares         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
 
-NAME = libft.a
-CC = cc
-CFLAGS = -Wall -Wextra -Werror -I. -c
 SRCS = ft_isalpha.c \
 ft_toupper.c \
 ft_bzero.c \
@@ -51,7 +47,9 @@ ft_itoa.c \
 ft_strmapi.c \
 ft_striteri.c
 
-BSRCS = ft_lstnew.c \
+OBJS = $(SRCS:.c=.o)
+
+BONUS = ft_lstnew.c \
 ft_lstadd_front.c \
 ft_lstsize.c \
 ft_lstlast.c \
@@ -59,28 +57,31 @@ ft_lstadd_back.c \
 ft_lstdelone.c \
 ft_lstclear.c \
 ft_lstiter.c \
-ft_lstmap.c \ 
+ft_lstmap.c
 
-OBJS = $(SRCS:.c=.o)
-BOBJS = $(BSRCS:.c=.o)
+BONUS_OBJS = $(BONUS:.c=.o)
+
+CC = cc
+CFLAGS = -Wall -Wextra -Werror -I. -c
+NAME = libft.a
 
 all: $(NAME)
-
-$(NAME): $(OBJS)
-	ar rcs $(NAME) $(OBJS)
-
-bonus: $(NAME): $(BOBJS)
-	ar rcs $(NAME) $(BOBJS)
 
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
+$(NAME): $(OBJS)
+	ar rcs $(NAME) $(OBJS)
+
 clean:
-	rm -f $(OBJS) $(BOBJS)
+	rm -f $(OBJS) $(BONUS_OBJS)
 
 fclean: clean
 	rm -f $(NAME)
 
 re: fclean all
+
+bonus: $(BONUS_OBJS)
+		ar rcs $(NAME) $(BONUS_OBJS)
 
 .PHONY:all bonus clean fclean re
