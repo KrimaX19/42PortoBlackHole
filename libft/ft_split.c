@@ -6,7 +6,7 @@
 /*   By: rusoares <rusoares@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 20:58:20 by rusoares          #+#    #+#             */
-/*   Updated: 2023/11/18 00:46:14 by rusoares         ###   ########.fr       */
+/*   Updated: 2023/11/18 16:13:18 by rusoares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,8 +44,6 @@ char	**ft_split(char const *s, char c)
 
 	i = 0;
 	j = 0;
-	if (cont(s, c) == 0)
-		return (0);
 	split = malloc ((cont(s, c) + 1) * sizeof (char *));
 	if (s == NULL || split == NULL)
 		return (0);
@@ -61,6 +59,6 @@ char	**ft_split(char const *s, char c)
 		}
 		i++;
 	}
-	split[j] = 0;
+	split[j] = NULL;
 	return (split);
 }
