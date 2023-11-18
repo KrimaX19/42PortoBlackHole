@@ -6,11 +6,11 @@
 /*   By: rusoares <rusoares@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 17:46:10 by rusoares          #+#    #+#             */
-/*   Updated: 2023/11/09 22:42:17 by rusoares         ###   ########.fr       */
+/*   Updated: 2023/11/17 20:55:47 by rusoares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include <libft.h>
 
 char	*ft_strchr(const char *s, int c)
 {

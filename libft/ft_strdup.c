@@ -6,13 +6,10 @@
 /*   By: rusoares <rusoares@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/05 17:12:19 by rusoares          #+#    #+#             */
-/*   Updated: 2023/11/07 21:03:57 by rusoares         ###   ########.fr       */
+/*   Updated: 2023/11/17 20:55:50 by rusoares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <stdio.h>
-#include <stdlib.h>
 #include <libft.h>
 
 char	*ft_strdup(const char *s)

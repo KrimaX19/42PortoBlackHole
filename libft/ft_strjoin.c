@@ -3,15 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: rusoares <rusoares@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 12:21:06 by rusoares          #+#    #+#             */
-/*   Updated: 2023/11/11 16:05:25 by marvin           ###   ########.fr       */
+/*   Updated: 2023/11/17 20:56:01 by rusoares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <stdlib.h>
 #include <libft.h>
 
 char	*ft_strjoin(char const *str1, char const *str2)
@@ -30,32 +28,3 @@ char	*ft_strjoin(char const *str1, char const *str2)
 	ft_strlcat (r, (char *)str2, len + 1);
 	return (r);
 }
-
-/*
-{
-	char	*dst;
-	char	*cpy;
-	char	len;
-
-	len = (ft_strlen(str1)+ft_strlen(str2));
-	dst = malloc(sizeof(dst) * len + 1);
-	if (dst && *str1 && *str2)
-	{
-		cpy = dst;
-		while (*str1 != '\0')
-		{
-			*dst++ = *str1++;
-		}
-		while (*str2 != '\0')
-		{
-			*dst++ = *str2++;
-		}
-		*dst = '\0';
-	}
-	else
-	{
-		return (NULL);
-	}
-	return (cpy);
-}
-*/

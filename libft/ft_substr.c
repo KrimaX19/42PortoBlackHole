@@ -6,39 +6,32 @@
 /*   By: rusoares <rusoares@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 19:50:16 by rusoares          #+#    #+#             */
-/*   Updated: 2023/11/16 21:57:58 by rusoares         ###   ########.fr       */
+/*   Updated: 2023/11/17 23:58:05 by rusoares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <stdlib.h>
-#include <stdio.h>
-#include <string.h>
 #include <libft.h>
 
 char	*ft_substr(const char *s, unsigned int start, size_t len)
 {
-	unsigned int	o;
-	size_t			i;
-	char			*str;
+	char	*str;
 
-	o = (unsigned int)len;
-	i = -1;
-	if (!s)
+	if (s == NULL)
+		return (0);
+	if (len > ft_strlen(s))
+		len = ft_strlen(s);
+	if (start > ft_strlen(s))
+		start = ft_strlen(s);
+	if ((start + len) > ft_strlen(s))
+		len = ft_strlen (s) - start;
+	str = malloc(sizeof(char) * (len + 1));
+	if (!str)
 		return (NULL);
-	if (o == 0 || start >= ft_strlen(s))
+	if (len == 0)
 	{
-		str = malloc(sizeof(char));
 		str[0] = '\0';
 		return (str);
 	}
-	if ((start + o) > ft_strlen(s))
-		o = ft_strlen(s) - start;
-	str = malloc(sizeof(char) * (o + 1));
-	if (!str)
-		return (NULL);
-	while (++i < o)
-		str[i] = s[i + start];
-	str[i] = '\0';
+	ft_strlcpy (str, (char *) &s[start], len + 1);
 	return (str);
 }

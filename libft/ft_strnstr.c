@@ -6,11 +6,10 @@
 /*   By: rusoares <rusoares@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 17:47:04 by rusoares          #+#    #+#             */
-/*   Updated: 2023/11/03 21:11:07 by rusoares         ###   ########.fr       */
+/*   Updated: 2023/11/17 20:56:29 by rusoares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
 #include <libft.h>
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)

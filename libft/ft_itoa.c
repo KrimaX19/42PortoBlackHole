@@ -6,11 +6,10 @@
 /*   By: rusoares <rusoares@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 21:04:10 by rusoares          #+#    #+#             */
-/*   Updated: 2023/11/14 21:24:41 by rusoares         ###   ########.fr       */
+/*   Updated: 2023/11/17 20:54:34 by rusoares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
 #include <libft.h>
 
 int		conta(int n);

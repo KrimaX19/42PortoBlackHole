@@ -6,11 +6,11 @@
 /*   By: rusoares <rusoares@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/06 16:22:51 by rusoares          #+#    #+#             */
-/*   Updated: 2023/11/02 18:25:09 by rusoares         ###   ########.fr       */
+/*   Updated: 2023/11/17 20:55:18 by rusoares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include <libft.h>
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {

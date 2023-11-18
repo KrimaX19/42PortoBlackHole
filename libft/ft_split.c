@@ -6,7 +6,7 @@
 /*   By: rusoares <rusoares@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 20:58:20 by rusoares          #+#    #+#             */
-/*   Updated: 2023/11/14 22:09:58 by rusoares         ###   ########.fr       */
+/*   Updated: 2023/11/18 00:46:14 by rusoares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int	cont(const char *s, char c)
 	j = 0;
 	while (*s != '\0')
 	{
-		if (*s != c && j == 0) 
+		if (*s != c && j == 0)
 		{
 			j = 1;
 			i++;
@@ -44,8 +44,10 @@ char	**ft_split(char const *s, char c)
 
 	i = 0;
 	j = 0;
+	if (cont(s, c) == 0)
+		return (0);
 	split = malloc ((cont(s, c) + 1) * sizeof (char *));
-	if (!s || !split)
+	if (s == NULL || split == NULL)
 		return (0);
 	start = -1;
 	while (i <= ft_strlen(s))

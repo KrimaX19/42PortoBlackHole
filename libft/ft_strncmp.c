@@ -6,11 +6,11 @@
 /*   By: rusoares <rusoares@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 17:46:56 by rusoares          #+#    #+#             */
-/*   Updated: 2023/11/02 20:34:05 by rusoares         ###   ########.fr       */
+/*   Updated: 2023/11/17 20:56:26 by rusoares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include <libft.h>
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {

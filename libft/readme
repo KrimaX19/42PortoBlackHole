@@ -52,23 +52,23 @@ Usar malloc() com estas funcoes:
 Parte 2:
 • substr - ft_substr.c - OK
 • srtjoin - ft_strjoin - OK
-• srttrim - ft_strtrim - NOK - Malloc size
-• split - ft_split - OK
+• srttrim - ft_strtrim - OK
+• split - ft_split - OK (STRICT - NOK(KO))
 • itoa - ft_iota - OK
 • strmapi - ft_strmapi - OK
 • striteri - ft_striteri - OK
-• putchar_fd - ft_putchar_fd - OK/NOK
-• putstr_fd - ft_putstr_fd - OK/NOK
-• putendl_fd - ft_putendl_fd - OK/NOK
-• putnbr_fd - ft_putnbr_fd - OK/NOK
+• putchar_fd - ft_putchar_fd - OK
+• putstr_fd - ft_putstr_fd - OK
+• putendl_fd - ft_putendl_fd - OK
+• putnbr_fd - ft_putnbr_fd - OK
 
 Bonus:
-• lstnew - ok
-• lsadd_front - ok
-• lstsize - ok
-• lstlast - ok
-• lstadd_back - ok
-• lstdelone - ok
-• lstclear - ok
-• lstiter - ok
-• lstmap - ok
+• lstnew - OK
+• lsadd_front - OK
+• lstsize - OK
+• lstlast - OK
+• lstadd_back - OK
+• lstdelone - OK
+• lstclear - OK
+• lstiter - OK
+• lstmap - OK (STRICT - NOK)

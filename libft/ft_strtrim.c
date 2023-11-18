@@ -6,7 +6,7 @@
 /*   By: rusoares <rusoares@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 20:12:39 by rusoares          #+#    #+#             */
-/*   Updated: 2023/11/16 22:52:41 by rusoares         ###   ########.fr       */
+/*   Updated: 2023/11/17 20:56:54 by rusoares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,10 +25,13 @@ char	*ft_strtrim(char const *s1, char const *set)
 		i++;
 	while (f >= 0 && ft_strchr (set, s1[f]))
 		f--;
-    if (f == 0 && i == ft_strlen(s1))
-        len = 0;
-    else
-	    len = (f - i) + 1 ;
+	if (f <= 0 && i == ft_strlen(s1))
+	{
+		len = 0;
+		f = 0;
+	}
+	else
+		len = (f - i) + 1 ;
 	r = malloc(len + 1);
 	if (r == NULL)
 	{
