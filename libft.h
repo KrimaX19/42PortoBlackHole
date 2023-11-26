@@ -13,15 +13,11 @@
 #ifndef LIBFT_H
 # define LIBFT_H
 
-/**
- *  * Libraries
- *   */
+/*Libraries*/
 # include <stdlib.h>
 # include <unistd.h>
 
-/**
- *  * Structures
- *   */
+/*Structures*/
 
 typedef struct s_list
 {
