@@ -22,11 +22,6 @@
 /**
  *  * Structures
  *   */
-typedef struct s_word
-{
-	unsigned int		start;
-	size_t				len;
-}				t_word;
 
 typedef struct s_list
 {
